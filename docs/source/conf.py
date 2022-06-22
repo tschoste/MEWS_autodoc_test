@@ -12,8 +12,9 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..'))
-import mews
+sys.path.insert(0, os.path.abspath('../../mews'))
+
+
 
 # -- Project information -----------------------------------------------------
 
@@ -31,8 +32,8 @@ release = '0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-	'sphinx.ext.autodoc',
 	'sphinx.ext.napoleon',
+	'sphinx.ext.autodoc',
 	'sphinx.ext.viewcode',
 ]
 

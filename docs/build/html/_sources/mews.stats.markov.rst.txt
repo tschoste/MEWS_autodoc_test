@@ -1,10 +1,10 @@
-mews.events.data package
-========================
+mews.stats.markov module
+==========================
 
 Module contents
 ---------------
 
-.. automodule:: mews.events.data
+.. automodule:: mews.stats.markov
    :members:
    :undoc-members:
    :show-inheritance:

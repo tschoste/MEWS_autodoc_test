@@ -36,7 +36,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">MEWS Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">API Documentation</a></li>
 </ul>
 
         </div>
@@ -98,7 +98,7 @@
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
 
-<div class="viewcode-block" id="DiscreteMarkov"><a class="viewcode-back" href="../../../mews.stats.html#mews.stats.extreme.DiscreteMarkov">[docs]</a><span class="k">class</span> <span class="nc">DiscreteMarkov</span><span class="p">():</span>
+<div class="viewcode-block" id="DiscreteMarkov"><a class="viewcode-back" href="../../../mews.stats.extreme.html#mews.stats.extreme.DiscreteMarkov">[docs]</a><span class="k">class</span> <span class="nc">DiscreteMarkov</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    obj = MarkovChain(transition_matrix,state_names,use_cython=True)</span>
 <span class="sd">    </span>
@@ -167,7 +167,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">use_cython</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-10</span>
         
-<div class="viewcode-block" id="DiscreteMarkov.history"><a class="viewcode-back" href="../../../mews.stats.html#mews.stats.extreme.DiscreteMarkov.history">[docs]</a>    <span class="k">def</span> <span class="nf">history</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">num_step</span><span class="p">,</span><span class="n">state0</span><span class="p">,</span><span class="n">min_steps</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span><span class="n">skip_steps</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">count_in_min_steps_intervals</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="DiscreteMarkov.history"><a class="viewcode-back" href="../../../mews.stats.extreme.html#mews.stats.extreme.DiscreteMarkov.history">[docs]</a>    <span class="k">def</span> <span class="nf">history</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">num_step</span><span class="p">,</span><span class="n">state0</span><span class="p">,</span><span class="n">min_steps</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span><span class="n">skip_steps</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">count_in_min_steps_intervals</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        obj.history(num_step,state0, min_steps, skip_steps)</span>
 <span class="sd">        </span>
@@ -178,21 +178,26 @@
 <span class="sd">        ----------</span>
 <span class="sd">        num_step : int or np.int</span>
 <span class="sd">            number of steps to simulate for the object&#39;s defined transition_matrix</span>
+<span class="sd">            </span>
 <span class="sd">        state0 : int or str</span>
 <span class="sd">            initial state of the history</span>
+<span class="sd">            </span>
 <span class="sd">        min_steps : int : optional</span>
 <span class="sd">            minimum number of steps before a state can transition</span>
+<span class="sd">            </span>
 <span class="sd">        skip_steps : int :</span>
 <span class="sd">            Number of steps at the beginning of the markov chain to assign to</span>
-<span class="sd">            state0 (this is used for weather files that may begin in the middle</span>
+<span class="sd">                    state0 (this is used for weather files that may begin in the middle</span>
 <span class="sd">                    of the day to avoid applying heat waves out of sync with</span>
 <span class="sd">                    day-night cycles)</span>
+<span class="sd">            </span>
 <span class="sd">        count_in_min_steps_intervals : bool : optional : Default = True</span>
 <span class="sd">            True = apply markov transition matrix as a discrete process that </span>
 <span class="sd">                   is randomly tested every min_steps interval (i.e. min_steps = 24</span>
 <span class="sd">                   means the markov chain state is only tested 1 in 24 steps)</span>
 <span class="sd">            False = apply markov transition matrix every step but only transition</span>
 <span class="sd">                   at every min_steps step.</span>
+<span class="sd">                   </span>
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        ValueError</span>
@@ -207,7 +212,6 @@
 <span class="sd">        None.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">state0</span><span class="p">,</span><span class="nb">str</span><span class="p">):</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">state0</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_names</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The &#39;state0&#39; input must be a valid state_name=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_names</span><span class="p">)))</span>
@@ -271,7 +275,7 @@
         
         <span class="k">return</span> <span class="n">final_state</span></div>
             
-<div class="viewcode-block" id="DiscreteMarkov.steady"><a class="viewcode-back" href="../../../mews.stats.html#mews.stats.extreme.DiscreteMarkov.steady">[docs]</a>    <span class="k">def</span> <span class="nf">steady</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="DiscreteMarkov.steady"><a class="viewcode-back" href="../../../mews.stats.extreme.html#mews.stats.extreme.DiscreteMarkov.steady">[docs]</a>    <span class="k">def</span> <span class="nf">steady</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        obj.steady()</span>
 <span class="sd">        </span>
@@ -341,7 +345,7 @@
 <span class="c1"># This is a preliminary class for the toy model. Much more thorough review of</span>
 <span class="c1"># best methods for heat wave generation and of using historical data as a </span>
 <span class="c1"># starting point for statistical distributions is needed.</span>
-<div class="viewcode-block" id="Extremes"><a class="viewcode-back" href="../../../mews.stats.html#mews.stats.extreme.Extremes">[docs]</a><span class="k">class</span> <span class="nc">Extremes</span><span class="p">():</span>
+<div class="viewcode-block" id="Extremes"><a class="viewcode-back" href="../../../mews.stats.extreme.html#mews.stats.extreme.Extremes">[docs]</a><span class="k">class</span> <span class="nc">Extremes</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Fit weather data with a model for extreme hot and cold that can</span>
 <span class="sd">    then be modified to produce increasing intensity and duration</span>
@@ -894,17 +898,17 @@
             <span class="n">state_int_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ep_list</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">state_int_list</span>
 
-<div class="viewcode-block" id="Extremes.double_shape_func"><a class="viewcode-back" href="../../../mews.stats.html#mews.stats.extreme.Extremes.double_shape_func">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="Extremes.double_shape_func"><a class="viewcode-back" href="../../../mews.stats.extreme.html#mews.stats.extreme.Extremes.double_shape_func">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">double_shape_func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">min_s</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">A</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="n">D</span><span class="p">)</span> <span class="o">+</span> <span class="n">B</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">min_s</span><span class="p">)))</span></div>
 
-<div class="viewcode-block" id="Extremes.heat_wave_shape_func"><a class="viewcode-back" href="../../../mews.stats.html#mews.stats.extreme.Extremes.heat_wave_shape_func">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="Extremes.heat_wave_shape_func"><a class="viewcode-back" href="../../../mews.stats.extreme.html#mews.stats.extreme.Extremes.heat_wave_shape_func">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">heat_wave_shape_func</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">D_odd</span><span class="p">,</span><span class="n">min_s</span><span class="p">):</span>
         
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">t</span><span class="o">&gt;</span><span class="n">D_odd</span><span class="p">,</span>
                  <span class="n">B</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">t</span><span class="o">/</span><span class="n">min_s</span><span class="p">)),</span>
                  <span class="n">A</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">t</span> <span class="o">/</span> <span class="n">D_odd</span><span class="p">)</span> <span class="o">+</span> <span class="n">B</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">t</span><span class="o">/</span><span class="n">min_s</span><span class="p">)))</span></div>
-<div class="viewcode-block" id="Extremes.total_energy_integral"><a class="viewcode-back" href="../../../mews.stats.html#mews.stats.extreme.Extremes.total_energy_integral">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="Extremes.total_energy_integral"><a class="viewcode-back" href="../../../mews.stats.extreme.html#mews.stats.extreme.Extremes.total_energy_integral">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">total_energy_integral</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">D_odd</span><span class="p">,</span><span class="n">min_s</span><span class="p">,</span><span class="n">is_hw</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">is_hw</span><span class="p">:</span>
             <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>

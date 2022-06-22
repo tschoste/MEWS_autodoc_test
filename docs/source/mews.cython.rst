@@ -1,19 +1,15 @@
 mews.cython package
 ===================
 
-mews.cython.markov module
--------------------------
+Calculates Markov chain using Cython.
 
-.. automodule:: mews.cython.markov
-   :members:
-   :undoc-members:
-   :show-inheritance:
+Submodules
+-------------
+
+.. toctree::
+   :maxdepth: 1
+   
+   mews.cython.markov
 
 
-Module contents
----------------
 
-.. automodule:: mews.cython
-   :members:
-   :undoc-members:
-   :show-inheritance:

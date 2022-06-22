@@ -1,7 +1,21 @@
-MEWS Modules
-===============
+API Documentation
+===================
+
+Subpackages
+---------------
+
+.. automodule:: mews
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 .. toctree::
-   :maxdepth: 6
+   :maxdepth: 1
 
-   mews
+   mews.cython
+   mews.epw
+   mews.errors
+   mews.events
+   mews.graphics
+   mews.stats
+   mews.weather

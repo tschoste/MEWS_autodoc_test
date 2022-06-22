@@ -1,19 +1,13 @@
 mews.epw package
-================
+===================
 
 
 
--------------------
+Submodules
+-------------
 
-.. automodule:: mews.epw.epw
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. toctree::
+   :maxdepth: 1
+   
+   mews.epw.epw
 
-Module contents
----------------
-
-.. automodule:: mews.epw
-   :members:
-   :undoc-members:
-   :show-inheritance:

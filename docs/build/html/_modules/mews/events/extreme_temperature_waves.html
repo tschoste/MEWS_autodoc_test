@@ -36,7 +36,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">MEWS Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">API Documentation</a></li>
 </ul>
 
         </div>
@@ -94,7 +94,7 @@
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1"># TODO make this a class such that erf(a) and erf(b) are not recalculated.</span>
-<div class="viewcode-block" id="cdf_truncnorm"><a class="viewcode-back" href="../../../mews.events.html#mews.events.extreme_temperature_waves.cdf_truncnorm">[docs]</a><span class="k">def</span> <span class="nf">cdf_truncnorm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">sig</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+<div class="viewcode-block" id="cdf_truncnorm"><a class="viewcode-back" href="../../../mews.events.extreme_temperature_waves.html#mews.events.extreme_temperature_waves.cdf_truncnorm">[docs]</a><span class="k">def</span> <span class="nf">cdf_truncnorm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">sig</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
     <span class="c1">#https://en.wikipedia.org/wiki/Truncated_normal_distribution</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
@@ -107,7 +107,7 @@
         <span class="n">erf_alpha</span> <span class="o">=</span> <span class="n">erf</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">erf</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span> <span class="o">-</span> <span class="n">erf_alpha</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">erf</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span> <span class="o">-</span> <span class="n">erf_alpha</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="offset_cdf_truncnorm"><a class="viewcode-back" href="../../../mews.events.html#mews.events.extreme_temperature_waves.offset_cdf_truncnorm">[docs]</a><span class="k">def</span> <span class="nf">offset_cdf_truncnorm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">sig</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">rnd</span><span class="p">):</span>
+<div class="viewcode-block" id="offset_cdf_truncnorm"><a class="viewcode-back" href="../../../mews.events.extreme_temperature_waves.html#mews.events.extreme_temperature_waves.offset_cdf_truncnorm">[docs]</a><span class="k">def</span> <span class="nf">offset_cdf_truncnorm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">sig</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">rnd</span><span class="p">):</span>
     <span class="c1">#https://en.wikipedia.org/wiki/Truncated_normal_distribution</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
@@ -120,7 +120,7 @@
         <span class="n">erf_alpha</span> <span class="o">=</span> <span class="n">erf</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">erf</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span> <span class="o">-</span> <span class="n">erf_alpha</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">erf</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span> <span class="o">-</span> <span class="n">erf_alpha</span><span class="p">)</span> <span class="o">-</span> <span class="n">rnd</span></div>
     
-<div class="viewcode-block" id="trunc_norm_dist"><a class="viewcode-back" href="../../../mews.events.html#mews.events.extreme_temperature_waves.trunc_norm_dist">[docs]</a><span class="k">def</span> <span class="nf">trunc_norm_dist</span><span class="p">(</span><span class="n">rnd</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">sig</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">minval</span><span class="p">,</span><span class="n">maxval</span><span class="p">):</span>
+<div class="viewcode-block" id="trunc_norm_dist"><a class="viewcode-back" href="../../../mews.events.extreme_temperature_waves.html#mews.events.extreme_temperature_waves.trunc_norm_dist">[docs]</a><span class="k">def</span> <span class="nf">trunc_norm_dist</span><span class="p">(</span><span class="n">rnd</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">sig</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">minval</span><span class="p">,</span><span class="n">maxval</span><span class="p">):</span>
     <span class="c1"># inverse lookup from cdf</span>
     <span class="n">x</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">bisect</span><span class="p">(</span><span class="n">offset_cdf_truncnorm</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="n">sig</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">rnd</span><span class="p">),</span><span class="n">full_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">converged</span><span class="p">:</span>
@@ -128,17 +128,17 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The bisection method failed to converge! Please investigate&quot;</span><span class="p">)</span></div>
     
-<div class="viewcode-block" id="transform_fit"><a class="viewcode-back" href="../../../mews.events.html#mews.events.extreme_temperature_waves.transform_fit">[docs]</a><span class="k">def</span> <span class="nf">transform_fit</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="n">minval</span><span class="p">,</span><span class="n">maxval</span><span class="p">):</span>
+<div class="viewcode-block" id="transform_fit"><a class="viewcode-back" href="../../../mews.events.extreme_temperature_waves.html#mews.events.extreme_temperature_waves.transform_fit">[docs]</a><span class="k">def</span> <span class="nf">transform_fit</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="n">minval</span><span class="p">,</span><span class="n">maxval</span><span class="p">):</span>
     <span class="c1"># this function maps a logarithm from 0 to interval making for a good log-normal fit</span>
     <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span>  <span class="p">(</span><span class="n">value</span> <span class="o">-</span> <span class="n">minval</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">maxval</span> <span class="o">-</span> <span class="n">minval</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span></div>
                  
 <span class="c1"># TODO - merge these functions with those in ExtremeTemperatureWaves</span>
-<div class="viewcode-block" id="inverse_transform_fit"><a class="viewcode-back" href="../../../mews.events.html#mews.events.extreme_temperature_waves.inverse_transform_fit">[docs]</a><span class="k">def</span> <span class="nf">inverse_transform_fit</span><span class="p">(</span><span class="n">norm_signal</span><span class="p">,</span> <span class="n">signal_max</span><span class="p">,</span> <span class="n">signal_min</span><span class="p">):</span>
+<div class="viewcode-block" id="inverse_transform_fit"><a class="viewcode-back" href="../../../mews.events.extreme_temperature_waves.html#mews.events.extreme_temperature_waves.inverse_transform_fit">[docs]</a><span class="k">def</span> <span class="nf">inverse_transform_fit</span><span class="p">(</span><span class="n">norm_signal</span><span class="p">,</span> <span class="n">signal_max</span><span class="p">,</span> <span class="n">signal_min</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">norm_signal</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">signal_max</span> <span class="o">-</span> <span class="n">signal_min</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span> <span class="o">+</span> <span class="n">signal_min</span> </div>
 
 
 
-<div class="viewcode-block" id="ExtremeTemperatureWaves"><a class="viewcode-back" href="../../../mews.events.html#mews.events.extreme_temperature_waves.ExtremeTemperatureWaves">[docs]</a><span class="k">class</span> <span class="nc">ExtremeTemperatureWaves</span><span class="p">(</span><span class="n">Extremes</span><span class="p">):</span>
+<div class="viewcode-block" id="ExtremeTemperatureWaves"><a class="viewcode-back" href="../../../mews.events.extreme_temperature_waves.html#mews.events.extreme_temperature_waves.ExtremeTemperatureWaves">[docs]</a><span class="k">class</span> <span class="nc">ExtremeTemperatureWaves</span><span class="p">(</span><span class="n">Extremes</span><span class="p">):</span>
     
     <span class="c1">#  These url&#39;s must end with &quot;/&quot; !</span>
     
@@ -252,7 +252,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">extreme_results</span> <span class="o">=</span> <span class="p">{}</span>
         
         
-<div class="viewcode-block" id="ExtremeTemperatureWaves.create_scenario"><a class="viewcode-back" href="../../../mews.events.html#mews.events.extreme_temperature_waves.ExtremeTemperatureWaves.create_scenario">[docs]</a>    <span class="k">def</span> <span class="nf">create_scenario</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">scenario_name</span><span class="p">,</span><span class="n">start_year</span><span class="p">,</span><span class="n">num_year</span><span class="p">,</span><span class="n">climate_temp_func</span><span class="p">,</span>
+<div class="viewcode-block" id="ExtremeTemperatureWaves.create_scenario"><a class="viewcode-back" href="../../../mews.events.extreme_temperature_waves.html#mews.events.extreme_temperature_waves.ExtremeTemperatureWaves.create_scenario">[docs]</a>    <span class="k">def</span> <span class="nf">create_scenario</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">scenario_name</span><span class="p">,</span><span class="n">start_year</span><span class="p">,</span><span class="n">num_year</span><span class="p">,</span><span class="n">climate_temp_func</span><span class="p">,</span>
                         <span class="n">num_realization</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
         
         <span class="sd">&quot;&quot;&quot;</span>
@@ -1043,7 +1043,7 @@
     
         <span class="k">return</span> <span class="n">cur_month_heat_waves</span></div>
             
-<div class="viewcode-block" id="DeltaTransition_IPCC_FigureSPM6"><a class="viewcode-back" href="../../../mews.events.html#mews.events.extreme_temperature_waves.DeltaTransition_IPCC_FigureSPM6">[docs]</a><span class="k">class</span> <span class="nc">DeltaTransition_IPCC_FigureSPM6</span><span class="p">():</span>
+<div class="viewcode-block" id="DeltaTransition_IPCC_FigureSPM6"><a class="viewcode-back" href="../../../mews.events.extreme_temperature_waves.html#mews.events.extreme_temperature_waves.DeltaTransition_IPCC_FigureSPM6">[docs]</a><span class="k">class</span> <span class="nc">DeltaTransition_IPCC_FigureSPM6</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This class assumes that we can divide by the 1.0 C multipliers for the present</span>
 <span class="sd">    day and then multiply. We interpolate linearly or extrapolate linearly from</span>
@@ -1329,7 +1329,7 @@
     <span class="c1"># min and max as inputs</span>
     
 
-<div class="viewcode-block" id="ClimateScenario"><a class="viewcode-back" href="../../../mews.events.html#mews.events.extreme_temperature_waves.ClimateScenario">[docs]</a><span class="k">class</span> <span class="nc">ClimateScenario</span><span class="p">():</span>
+<div class="viewcode-block" id="ClimateScenario"><a class="viewcode-back" href="../../../mews.events.extreme_temperature_waves.html#mews.events.extreme_temperature_waves.ClimateScenario">[docs]</a><span class="k">class</span> <span class="nc">ClimateScenario</span><span class="p">():</span>
     
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">file_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
@@ -1338,7 +1338,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">scenarios</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s1">&#39;$t^3$&#39;</span><span class="p">,</span><span class="sa">r</span><span class="s1">&#39;$t^2$&#39;</span><span class="p">,</span><span class="sa">r</span><span class="s1">&#39;$t$&#39;</span><span class="p">,</span><span class="sa">r</span><span class="s1">&#39;$1$&#39;</span><span class="p">,</span><span class="sa">r</span><span class="s1">&#39;$R^2$&#39;</span><span class="p">]</span>
         
-<div class="viewcode-block" id="ClimateScenario.calculate_coef"><a class="viewcode-back" href="../../../mews.events.html#mews.events.extreme_temperature_waves.ClimateScenario.calculate_coef">[docs]</a>    <span class="k">def</span> <span class="nf">calculate_coef</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">scenario</span><span class="p">):</span>
+<div class="viewcode-block" id="ClimateScenario.calculate_coef"><a class="viewcode-back" href="../../../mews.events.extreme_temperature_waves.html#mews.events.extreme_temperature_waves.ClimateScenario.calculate_coef">[docs]</a>    <span class="k">def</span> <span class="nf">calculate_coef</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">scenario</span><span class="p">):</span>
         <span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df_temp_anomaly</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">df_temp_anomaly</span><span class="p">[</span><span class="s2">&quot;Climate Scenario&quot;</span><span class="p">]</span><span class="o">==</span><span class="n">scenario</span><span class="p">]</span>
         
         <span class="n">Xi</span> <span class="o">=</span> <span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">]</span><span class="o">-</span><span class="mi">2020</span><span class="p">)</span><span class="o">/</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
@@ -1357,10 +1357,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">scenarios</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scenario</span><span class="p">)</span></div>
 
     <span class="c1"># 0.267015 shifts to make the baseline year 2020 we assume a 1.0C affect </span>
-<div class="viewcode-block" id="ClimateScenario.climate_temp_func"><a class="viewcode-back" href="../../../mews.events.html#mews.events.extreme_temperature_waves.ClimateScenario.climate_temp_func">[docs]</a>    <span class="k">def</span> <span class="nf">climate_temp_func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">year</span><span class="p">):</span>
+<div class="viewcode-block" id="ClimateScenario.climate_temp_func"><a class="viewcode-back" href="../../../mews.events.extreme_temperature_waves.html#mews.events.extreme_temperature_waves.ClimateScenario.climate_temp_func">[docs]</a>    <span class="k">def</span> <span class="nf">climate_temp_func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">year</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">polyval</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">p_coef</span><span class="p">,(</span><span class="n">year</span><span class="o">-</span><span class="mi">2020</span><span class="p">)</span><span class="o">/</span><span class="mi">50</span><span class="p">)</span><span class="o">-</span><span class="mf">0.267015</span></div>
     
-<div class="viewcode-block" id="ClimateScenario.write_coef_to_table"><a class="viewcode-back" href="../../../mews.events.html#mews.events.extreme_temperature_waves.ClimateScenario.write_coef_to_table">[docs]</a>    <span class="k">def</span> <span class="nf">write_coef_to_table</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ClimateScenario.write_coef_to_table"><a class="viewcode-back" href="../../../mews.events.extreme_temperature_waves.html#mews.events.extreme_temperature_waves.ClimateScenario.write_coef_to_table">[docs]</a>    <span class="k">def</span> <span class="nf">write_coef_to_table</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">table_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">table</span><span class="p">,</span>
                                 <span class="n">index</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">scenarios</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
         <span class="n">table_df</span><span class="o">.</span><span class="n">to_latex</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\dlvilla\Documents\BuildingEnergyModeling\MEWS\mews_temp\SimbuildPaper\from_python\cubic_coef_table.tex&quot;</span><span class="p">,</span>
