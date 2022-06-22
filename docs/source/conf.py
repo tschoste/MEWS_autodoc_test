@@ -12,7 +12,18 @@
 #
 import os
 import sys
+<<<<<<< HEAD
 sys.path.insert(0, os.path.abspath('../../mews'))
+||||||| 0bba50f
+sys.path.insert(0, os.path.abspath('../../mews'))
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/master
+=======
+sys.path.insert(0, os.path.abspath('../..'))
+>>>>>>> 63657926420cb0b50aef53870cbbe0b489ca09ac
 
 # -- Project information -----------------------------------------------------
 
