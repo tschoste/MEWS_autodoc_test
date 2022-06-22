@@ -12,6 +12,7 @@ Subpackages
 .. toctree::
    :maxdepth: 1
    
+   mews.cython
    mews.epw
    mews.errors
    mews.events
