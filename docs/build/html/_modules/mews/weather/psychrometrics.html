@@ -13,6 +13,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -36,7 +37,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">MEWS Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">API Documentation</a></li>
 </ul>
 
         </div>
@@ -73,7 +74,7 @@
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<div class="viewcode-block" id="relative_humidity"><a class="viewcode-back" href="../../../mews.weather.html#mews.weather.psychrometrics.relative_humidity">[docs]</a><span class="k">def</span> <span class="nf">relative_humidity</span><span class="p">(</span><span class="n">dew_point_F</span><span class="p">,</span> <span class="n">dry_bulb_F</span><span class="p">):</span>
+<div class="viewcode-block" id="relative_humidity"><a class="viewcode-back" href="../../../mews.weather.psychrometrics.html#mews.weather.psychrometrics.relative_humidity">[docs]</a><span class="k">def</span> <span class="nf">relative_humidity</span><span class="p">(</span><span class="n">dew_point_F</span><span class="p">,</span> <span class="n">dry_bulb_F</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">claussius_clapeyron</span><span class="p">(</span><span class="n">Temp_C</span><span class="p">):</span>
         <span class="n">kelvin_offset</span> <span class="o">=</span> <span class="mf">273.15</span>
         <span class="n">latent_heat</span> <span class="o">=</span> <span class="mf">2.453e6</span> <span class="c1">#J/kg</span>

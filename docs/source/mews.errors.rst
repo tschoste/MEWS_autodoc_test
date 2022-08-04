@@ -4,18 +4,9 @@ mews.errors package
 Submodules
 ----------
 
-mews.errors.exceptions module
------------------------------
+.. toctree::
+   :maxdepth: 1
+   
+   mews.errors.exceptions
 
-.. automodule:: mews.errors.exceptions
-   :members:
-   :undoc-members:
-   :show-inheritance:
 
-Module contents
----------------
-
-.. automodule:: mews.errors
-   :members:
-   :undoc-members:
-   :show-inheritance:

@@ -13,6 +13,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -36,7 +37,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">MEWS Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">API Documentation</a></li>
 </ul>
 
         </div>
@@ -101,7 +102,7 @@
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
 
-<div class="viewcode-block" id="Alter"><a class="viewcode-back" href="../../../mews.weather.html#mews.weather.alter.Alter">[docs]</a><span class="k">class</span> <span class="nc">Alter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="Alter"><a class="viewcode-back" href="../../../mews.weather.alter.html#mews.weather.alter.Alter">[docs]</a><span class="k">class</span> <span class="nc">Alter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Alter energy plus or doe2 weather files - shorter or longer than a year permitted</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -286,7 +287,7 @@
             <span class="k">return</span> <span class="n">ind_list</span><span class="p">[:</span><span class="n">num</span><span class="p">]</span>
         
         
-<div class="viewcode-block" id="Alter.add_alteration"><a class="viewcode-back" href="../../../mews.weather.html#mews.weather.alter.Alter.add_alteration">[docs]</a>    <span class="k">def</span> <span class="nf">add_alteration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+<div class="viewcode-block" id="Alter.add_alteration"><a class="viewcode-back" href="../../../mews.weather.alter.html#mews.weather.alter.Alter.add_alteration">[docs]</a>    <span class="k">def</span> <span class="nf">add_alteration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                       <span class="n">year</span><span class="p">,</span>
                       <span class="n">day</span><span class="p">,</span>
                       <span class="n">month</span><span class="p">,</span>
@@ -447,7 +448,7 @@
         <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">bind</span><span class="p">:</span><span class="n">eind</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">bind</span><span class="p">:</span><span class="n">eind</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">column</span><span class="p">]</span> <span class="o">+</span> <span class="n">addsegmod</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">bind</span><span class="p">:</span><span class="n">eind</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">column</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">alterations</span><span class="p">[</span><span class="n">alteration_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">addseg</span></div>
         
-<div class="viewcode-block" id="Alter.read"><a class="viewcode-back" href="../../../mews.weather.html#mews.weather.alter.Alter.read">[docs]</a>    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">weather_file_path</span><span class="p">,</span><span class="n">replace_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">check_types</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<div class="viewcode-block" id="Alter.read"><a class="viewcode-back" href="../../../mews.weather.alter.html#mews.weather.alter.Alter.read">[docs]</a>    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">weather_file_path</span><span class="p">,</span><span class="n">replace_year</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">check_types</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
              <span class="n">clear_alterations</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">isdoe2</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">use_exe</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">doe2_bin2txt_path</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;../third_party_software/BIN2TXT.EXE&quot;</span><span class="p">,</span>
              <span class="n">doe2_start_datetime</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">doe2_tz</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">doe2_hour_in_file</span><span class="o">=</span><span class="mi">8760</span><span class="p">,</span><span class="n">doe2_dst</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         
@@ -675,7 +676,7 @@
                     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;The input &#39;doe2_dst&#39; must have 2-elements that are datetime objects!&quot;</span><span class="p">)</span>
             
             
-<div class="viewcode-block" id="Alter.remove_alteration"><a class="viewcode-back" href="../../../mews.weather.html#mews.weather.alter.Alter.remove_alteration">[docs]</a>    <span class="k">def</span> <span class="nf">remove_alteration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">alteration_name</span><span class="p">):</span>
+<div class="viewcode-block" id="Alter.remove_alteration"><a class="viewcode-back" href="../../../mews.weather.alter.html#mews.weather.alter.Alter.remove_alteration">[docs]</a>    <span class="k">def</span> <span class="nf">remove_alteration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">alteration_name</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Remove an alteration that has already been added</span>
 <span class="sd">        </span>
@@ -704,7 +705,7 @@
                              <span class="o">+</span><span class="s2">&quot; alterations names are:</span><span class="se">\n\n</span><span class="si">{1}</span><span class="s2">&quot;</span>
                              <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">alteration_name</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alterations</span><span class="p">)))</span></div>
         
-<div class="viewcode-block" id="Alter.reindex_2_datetime"><a class="viewcode-back" href="../../../mews.weather.html#mews.weather.alter.Alter.reindex_2_datetime">[docs]</a>    <span class="k">def</span> <span class="nf">reindex_2_datetime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">tzname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">original</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="Alter.reindex_2_datetime"><a class="viewcode-back" href="../../../mews.weather.alter.html#mews.weather.alter.Alter.reindex_2_datetime">[docs]</a>    <span class="k">def</span> <span class="nf">reindex_2_datetime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">tzname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">original</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        obj.reindex_2_datetime(tzname=None)</span>
 <span class="sd">        </span>
@@ -763,7 +764,7 @@
                 <span class="k">raise</span> <span class="ne">NotADirectoryError</span><span class="p">(</span><span class="s2">&quot;The folder &#39;</span><span class="si">{0}</span><span class="s2">&#39; does not&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">base_dir</span><span class="p">)</span>
                                          <span class="o">+</span><span class="s2">&quot; exist&quot;</span><span class="p">)</span>
     
-<div class="viewcode-block" id="Alter.write"><a class="viewcode-back" href="../../../mews.weather.html#mews.weather.alter.Alter.write">[docs]</a>    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">out_file_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">create_dir</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<div class="viewcode-block" id="Alter.write"><a class="viewcode-back" href="../../../mews.weather.alter.html#mews.weather.alter.Alter.write">[docs]</a>    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">out_file_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">create_dir</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
               <span class="n">use_exe</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">txt2bin_exepath</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;../third_party_software/TXT2BIN.EXE&quot;</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        write an Energy Plus Weather file with alterations</span>

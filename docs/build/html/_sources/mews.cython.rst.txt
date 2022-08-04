@@ -1,19 +1,12 @@
 mews.cython package
 ===================
 
-mews.cython.markov module
--------------------------
-
-.. automodule:: mews.cython.markov
-   :members:
-   :undoc-members:
-   :show-inheritance:
 
 
-Module contents
----------------
+Submodules
+-------------
 
-.. automodule:: mews.cython
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. toctree::
+   :maxdepth: 1
+   
+   mews.cython.markov
