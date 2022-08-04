@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>mews.weather.doe2weather module &mdash; MEWS_autodoc_test 0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,6 +13,7 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -83,13 +83,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-mews.weather.doe2weather">
-<span id="mews-weather-doe2weather-module"></span><h1>mews.weather.doe2weather module<a class="headerlink" href="#module-mews.weather.doe2weather" title="Permalink to this headline"></a></h1>
+  <div class="section" id="module-mews.weather.doe2weather">
+<span id="mews-weather-doe2weather-module"></span><h1>mews.weather.doe2weather module<a class="headerlink" href="#module-mews.weather.doe2weather" title="Permalink to this heading"></a></h1>
 <p>Created on Thu Jul  1 10:26:52 2021</p>
 <p>&#64;author: dlvilla</p>
 <p>Created on Tue Apr 20 14:50:39 2021</p>
-<section id="copyright-notice">
-<h2>Copyright Notice<a class="headerlink" href="#copyright-notice" title="Permalink to this headline"></a></h2>
+<div class="section" id="copyright-notice">
+<h2>Copyright Notice<a class="headerlink" href="#copyright-notice" title="Permalink to this heading"></a></h2>
 <p>Copyright 2021 National Technology and Engineering Solutions of Sandia, LLC.
 Under the terms of Contract DE-NA0003525, there is a non-exclusive license
 for use of this work by or on behalf of the U.S. Government.
@@ -118,14 +118,16 @@ besides MEWS</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="mews.weather.doe2weather.DOE2Weather.bin2df">
 <span class="sig-name descname"><span class="pre">bin2df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">binfilename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_datetime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hour_in_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin2txt_exepath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timezone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dst</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_exe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mews/weather/doe2weather.html#DOE2Weather.bin2df"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#mews.weather.doe2weather.DOE2Weather.bin2df" title="Permalink to this definition"></a></dt>
-<dd><p>This function was originally written in matlab and is the
-“ReadDOE2BINTXTFile.m” function except that it also includes conversion
+<dd><dl>
+<dt>This function was originally written in matlab and is the</dt><dd><p>“ReadDOE2BINTXTFile.m” function except that it also includes conversion
 of the BIN file into a text file</p>
 <p>DST is a list of the start of daylight savings and end so that
-adjustments can be made and the time stamps adjusted for daylight savings.
-the input filename.txt must come from a DOE2 bin file that has been
-converted to a text file. It has the following columns of information:</p>
-<p>% Column Number   Variable      Description         Units
+adjustments can be made and the time stamps adjusted for daylight savings.</p>
+</dd>
+</dl>
+<p>% the input <a href="#id1"><span class="problematic" id="id2">*</span></a>.txt “filename” must come from a DOE2 bin file that has been
+%  converted to a text file. It has the following columns of information:
+% Column Number   Variable      Description         Units
 %C 1              IM2            MOMTH              (1-12)
 %C 2             ID             DAY OF MONTH
 %C 3             IH             HOUR OF DAY
@@ -253,29 +255,30 @@ and associates.</p></li>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>m</strong> (<em>np.array</em><em>(</em><em>x</em><em>,</em><em>17</em><em>) </em><em>: x = length of BIN file</em><em> (</em><em>ussually 8760</em><em>)</em>) – The columns of this array are:</p></li>
-<li><p><strong>Units</strong> (<em>% Column Number   Variable      Description</em>) – </p></li>
-<li><p><strong>(</strong><strong>1-12</strong><strong>)</strong> (<em>%C 1              IM2            MOMTH</em>) – </p></li>
-<li><p><strong>MONTH</strong> (<em>%C 2             ID             DAY OF</em>) – </p></li>
-<li><p><strong>DAY</strong> (<em>%C 3             IH             HOUR OF</em>) – </p></li>
-<li><p><strong>F</strong><strong>)</strong> (<em>%C 5             CALC</em><em>(</em><em>2</em><em>)        </em><em>DRY BULB TEMP</em><em>      (</em><em>DEG</em>) – </p></li>
-<li><p><strong>F</strong><strong>)</strong> – </p></li>
-<li><p><strong>HG</strong><strong>)</strong> (<em>%C 6             CALC</em><em>(</em><em>3</em><em>)        </em><em>PRESSURE</em><em>           (</em><em>INCHES OF</em>) – </p></li>
-<li><p><strong>10</strong><strong>)</strong> (<em>%C 7             CALC</em><em>(</em><em>4</em><em>)        </em><em>CLOUD AMOUNT</em><em>       (</em><em>0 -</em>) – </p></li>
-<li><p><strong>SNOWFALL</strong><strong>)</strong> (<em>%C 8             ISNOW          SNOW FLAG</em><em>          (</em><em>1 =</em>) – </p></li>
-<li><p><strong>RAINFALL</strong><strong>)</strong> (<em>%C 9             IRAIN          RAIN FLAG</em><em>          (</em><em>1 =</em>) – </p></li>
-<li><p><strong>0=N</strong> (<em>%C 10            IWNDDR         WIND DIRECTION</em><em>     (</em><em>0 - 15;</em>) – </p></li>
-<li><p><strong>1=NNE</strong> – </p></li>
-<li><p><strong>ETC</strong><strong>)</strong> – </p></li>
-<li><p><strong>AIR</strong><strong>)</strong> (<em>%C 11            CALC</em><em>(</em><em>8</em><em>)        </em><em>HUMIDITY RATIO</em><em>     (</em><em>LB H2O/LB</em>) – </p></li>
-<li><p><strong>FT</strong><strong>)</strong> (<em>%C 12            CALC</em><em>(</em><em>9</em><em>)        </em><em>DENSITY OF AIR</em><em>     (</em><em>LB/CU</em>) – </p></li>
-<li><p><strong>(</strong><strong>BTU/LB</strong><strong>)</strong> (<em>%C 13            CALC</em><em>(</em><em>10</em><em>)       </em><em>SPECIFIC ENTHALPY</em>) – </p></li>
-<li><p><strong>(</strong><strong>BTU/HR-SQFT</strong><strong>)</strong> (<em>%C 15            CALC</em><em>(</em><em>12</em><em>)       </em><em>DIR. NORMAL SOLAR</em>) – </p></li>
-<li><p><strong>(</strong><strong>BTU/HR-SQFT</strong><strong>)</strong> – </p></li>
-<li><p><strong>2</strong><strong>)</strong> (<em>%C 16            ICLDTY         CLOUD TYPE</em><em>         (</em><em>0 -</em>) – </p></li>
-<li><p><strong>KNOTS</strong> (<em>%C 17            CALC</em><em>(</em><em>14</em><em>)       </em><em>WIND SPEED</em>) – </p></li>
-<li><p><strong>headers</strong> (<em>list : list of np.array with specialized dtype to capture</em>) – the header for each month of data in the DOE-2 filename.BIN file.</p></li>
-<li><p><strong>follows</strong> (<em>The dtype spec is as</em>) – <dl class="simple">
+<li><p><strong>m</strong> (<em>np.array</em><em>(</em><em>x</em><em>,</em><em>17</em><em>) </em><em>: x = length of BIN file</em><em> (</em><em>ussually 8760</em><em>)</em>) – <p>The columns of this array are:</p>
+<p>% Column Number   Variable      Description         Units
+%C 1              IM2            MOMTH              (1-12)
+%C 2             ID             DAY OF MONTH
+%C 3             IH             HOUR OF DAY
+%C 4             CALC(1)        WET BULB TEMP      (DEG F)
+%C 5             CALC(2)        DRY BULB TEMP      (DEG F)
+%C 6             CALC(3)        PRESSURE           (INCHES OF HG)
+%C 7             CALC(4)        CLOUD AMOUNT       (0 - 10)
+%C 8             ISNOW          SNOW FLAG          (1 = SNOWFALL)
+%C 9             IRAIN          RAIN FLAG          (1 = RAINFALL)
+%C 10            IWNDDR         WIND DIRECTION     (0 - 15; 0=N, 1=NNE, ETC)
+%C 11            CALC(8)        HUMIDITY RATIO     (LB H2O/LB AIR)
+%C 12            CALC(9)        DENSITY OF AIR     (LB/CU FT)
+%C 13            CALC(10)       SPECIFIC ENTHALPY  (BTU/LB)
+%C 14            CALC(11)       TOTAL HOR. SOLAR   (BTU/HR-SQFT)
+%C 15            CALC(12)       DIR. NORMAL SOLAR  (BTU/HR-SQFT)
+%C 16            ICLDTY         CLOUD TYPE         (0 - 2)
+%C 17            CALC(14)       WIND SPEED         KNOTS</p>
+</p></li>
+<li><p><strong>headers</strong> (<em>list : list of np.array with specialized dtype to capture</em>) – <p>the header for each month of data in the DOE-2 <a href="#id3"><span class="problematic" id="id4">*</span></a>.BIN file.
+The dtype spec is as follows:</p>
+<blockquote>
+<div><dl class="simple">
 <dt>np.dtype([(‘location_IWDID’,’a20’),</dt><dd><p>(‘year_IWYR’, ‘i4’),
 (‘latitude_WLAT’,’f4’),
 (‘longitude_WLONG’,’f4’),
@@ -287,6 +290,7 @@ and associates.</p></li>
 (‘solar_flag_IWSOL’,’i4’)])</p>
 </dd>
 </dl>
+</div></blockquote>
 </p></li>
 <li><p><strong>binfilename</strong> (<em>str : valid path/filename for which a file will be</em>) – written.</p></li>
 </ul>
@@ -394,8 +398,8 @@ C     WNDSPD         WIND SPEED         KNOTS</p></li>
 
 </dd></dl>
 
-</section>
-</section>
+</div>
+</div>
 
 
            </div>

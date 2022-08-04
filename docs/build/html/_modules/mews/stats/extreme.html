@@ -13,6 +13,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -178,26 +179,21 @@
 <span class="sd">        ----------</span>
 <span class="sd">        num_step : int or np.int</span>
 <span class="sd">            number of steps to simulate for the object&#39;s defined transition_matrix</span>
-<span class="sd">            </span>
 <span class="sd">        state0 : int or str</span>
 <span class="sd">            initial state of the history</span>
-<span class="sd">            </span>
 <span class="sd">        min_steps : int : optional</span>
 <span class="sd">            minimum number of steps before a state can transition</span>
-<span class="sd">            </span>
 <span class="sd">        skip_steps : int :</span>
 <span class="sd">            Number of steps at the beginning of the markov chain to assign to</span>
-<span class="sd">                    state0 (this is used for weather files that may begin in the middle</span>
+<span class="sd">            state0 (this is used for weather files that may begin in the middle</span>
 <span class="sd">                    of the day to avoid applying heat waves out of sync with</span>
 <span class="sd">                    day-night cycles)</span>
-<span class="sd">            </span>
 <span class="sd">        count_in_min_steps_intervals : bool : optional : Default = True</span>
 <span class="sd">            True = apply markov transition matrix as a discrete process that </span>
 <span class="sd">                   is randomly tested every min_steps interval (i.e. min_steps = 24</span>
 <span class="sd">                   means the markov chain state is only tested 1 in 24 steps)</span>
 <span class="sd">            False = apply markov transition matrix every step but only transition</span>
 <span class="sd">                   at every min_steps step.</span>
-<span class="sd">                   </span>
 <span class="sd">        Raises</span>
 <span class="sd">        ------</span>
 <span class="sd">        ValueError</span>
@@ -212,6 +208,7 @@
 <span class="sd">        None.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
+        
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">state0</span><span class="p">,</span><span class="nb">str</span><span class="p">):</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">state0</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_names</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The &#39;state0&#39; input must be a valid state_name=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_names</span><span class="p">)))</span>
