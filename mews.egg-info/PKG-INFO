@@ -9,7 +9,6 @@ Author-email: dlvilla@sandia.gov
 Maintainer-email: dlvilla@sandia.gov
 License: Revised BSD
 Keywords: Building Energy Modeling,Infrastructure,Extreme Weather,Markov,Resilience,Energy Plus,DOE2,DOE-2
-Platform: UNKNOWN
 License-File: LICENSE.md
 License-File: LICENSE.txt
 
@@ -72,5 +71,3 @@ Contact
 --------
 
    * Daniel Villa, Sandia National Laboratories (SNL) dlvilla@sandia.gov
-
-

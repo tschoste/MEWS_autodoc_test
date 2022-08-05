@@ -1,0 +1,101 @@
+2022-08-02 09:41:41,057 | INFO | Script Initiation
+2022-08-02 09:41:41,119 | WARNING | Unable to import cartopy
+2022-08-02 09:41:41,120 | WARNING | Cannot display world map because cartopy is not properly installed
+2022-08-02 09:41:41,131 | INFO | All historical files downloaded
+2022-08-02 09:41:41,142 | INFO | All SSP119 files downloaded
+2022-08-02 09:41:41,151 | INFO | All SSP126 files downloaded
+2022-08-02 09:41:41,159 | INFO | All SSP245 files downloaded
+2022-08-02 09:41:41,167 | INFO | All SSP370 files downloaded
+2022-08-02 09:41:41,175 | INFO | All SSP585 files downloaded
+2022-08-02 09:41:53,253 | INFO | Temperature computation complete
+2022-08-03 11:46:42,237 | INFO | Script Initiation
+2022-08-03 11:46:43,127 | INFO | All historical files downloaded
+2022-08-03 11:46:43,138 | INFO | All SSP119 files downloaded
+2022-08-03 11:46:43,146 | INFO | All SSP126 files downloaded
+2022-08-03 11:46:43,155 | INFO | All SSP245 files downloaded
+2022-08-03 11:46:43,163 | INFO | All SSP370 files downloaded
+2022-08-03 11:46:43,171 | INFO | All SSP585 files downloaded
+2022-08-03 11:46:56,063 | INFO | Temperature computation complete
+2022-08-03 11:47:01,591 | INFO | Script Initiation
+2022-08-03 11:47:01,622 | INFO | All historical files downloaded
+2022-08-03 11:47:01,634 | INFO | All SSP119 files downloaded
+2022-08-03 11:47:01,643 | INFO | All SSP126 files downloaded
+2022-08-03 11:47:01,653 | INFO | All SSP245 files downloaded
+2022-08-03 11:47:01,662 | INFO | All SSP370 files downloaded
+2022-08-03 11:47:01,671 | INFO | All SSP585 files downloaded
+2022-08-03 11:47:10,790 | INFO | Temperature computation complete
+2022-08-03 11:47:30,928 | INFO | Script Initiation
+2022-08-03 11:47:30,960 | INFO | All historical files downloaded
+2022-08-03 11:47:30,972 | INFO | All SSP119 files downloaded
+2022-08-03 11:47:30,981 | INFO | All SSP126 files downloaded
+2022-08-03 11:47:30,990 | INFO | All SSP245 files downloaded
+2022-08-03 11:47:31,002 | INFO | All SSP370 files downloaded
+2022-08-03 11:47:31,012 | INFO | All SSP585 files downloaded
+2022-08-03 11:47:40,377 | INFO | Temperature computation complete
+2022-08-03 11:48:08,556 | INFO | Script Initiation
+2022-08-03 11:48:08,590 | INFO | All historical files downloaded
+2022-08-03 11:48:08,601 | INFO | All SSP119 files downloaded
+2022-08-03 11:48:08,611 | INFO | All SSP126 files downloaded
+2022-08-03 11:48:08,620 | INFO | All SSP245 files downloaded
+2022-08-03 11:48:08,630 | INFO | All SSP370 files downloaded
+2022-08-03 11:48:08,639 | INFO | All SSP585 files downloaded
+2022-08-03 11:48:17,786 | INFO | Temperature computation complete
+2022-08-03 11:48:26,073 | INFO | Script Initiation
+2022-08-03 11:48:26,796 | INFO | All historical files downloaded
+2022-08-03 11:48:26,808 | INFO | All SSP119 files downloaded
+2022-08-03 11:48:26,816 | INFO | All SSP126 files downloaded
+2022-08-03 11:48:26,823 | INFO | All SSP245 files downloaded
+2022-08-03 11:48:26,831 | INFO | All SSP370 files downloaded
+2022-08-03 11:48:26,840 | INFO | All SSP585 files downloaded
+2022-08-03 11:48:36,792 | INFO | Temperature computation complete
+2022-08-03 11:54:10,183 | INFO | Script Initiation
+2022-08-03 11:54:10,821 | INFO | All historical files downloaded
+2022-08-03 11:54:10,831 | INFO | All SSP119 files downloaded
+2022-08-03 11:54:10,840 | INFO | All SSP126 files downloaded
+2022-08-03 11:54:10,848 | INFO | All SSP245 files downloaded
+2022-08-03 11:54:10,855 | INFO | All SSP370 files downloaded
+2022-08-03 11:54:10,863 | INFO | All SSP585 files downloaded
+2022-08-03 11:54:20,665 | INFO | Temperature computation complete
+2022-08-03 11:54:26,808 | INFO | Script Initiation
+2022-08-03 11:54:26,840 | INFO | All historical files downloaded
+2022-08-03 11:54:26,852 | INFO | All SSP119 files downloaded
+2022-08-03 11:54:26,862 | INFO | All SSP126 files downloaded
+2022-08-03 11:54:26,871 | INFO | All SSP245 files downloaded
+2022-08-03 11:54:26,880 | INFO | All SSP370 files downloaded
+2022-08-03 11:54:26,891 | INFO | All SSP585 files downloaded
+2022-08-03 11:54:36,356 | INFO | Temperature computation complete
+2022-08-03 11:55:04,992 | INFO | Script Initiation
+2022-08-03 11:55:05,025 | INFO | All historical files downloaded
+2022-08-03 11:55:05,041 | INFO | All SSP119 files downloaded
+2022-08-03 11:55:05,054 | INFO | All SSP126 files downloaded
+2022-08-03 11:55:05,063 | INFO | All SSP245 files downloaded
+2022-08-03 11:55:05,073 | INFO | All SSP370 files downloaded
+2022-08-03 11:55:05,087 | INFO | All SSP585 files downloaded
+2022-08-03 11:55:14,291 | INFO | Temperature computation complete
+2022-08-03 11:56:50,520 | INFO | Script Initiation
+2022-08-03 11:56:50,552 | INFO | All historical files downloaded
+2022-08-03 11:56:50,563 | INFO | All SSP119 files downloaded
+2022-08-03 11:56:50,571 | INFO | All SSP126 files downloaded
+2022-08-03 11:56:50,579 | INFO | All SSP245 files downloaded
+2022-08-03 11:56:50,587 | INFO | All SSP370 files downloaded
+2022-08-03 11:56:50,597 | INFO | All SSP585 files downloaded
+2022-08-03 11:56:59,873 | INFO | Temperature computation complete
+2022-08-03 12:02:01,319 | INFO | Script Initiation
+2022-08-03 12:02:15,353 | INFO | Script Initiation
+2022-08-03 12:02:15,353 | WARNING | Cannot display world map because cartopy is not properly installed
+2022-08-03 12:02:15,363 | INFO | All historical files downloaded
+2022-08-03 12:02:15,374 | INFO | All SSP119 files downloaded
+2022-08-03 12:02:15,384 | INFO | All SSP126 files downloaded
+2022-08-03 12:02:15,393 | INFO | All SSP245 files downloaded
+2022-08-03 12:02:15,402 | INFO | All SSP370 files downloaded
+2022-08-03 12:02:15,412 | INFO | All SSP585 files downloaded
+2022-08-03 12:02:24,817 | INFO | Temperature computation complete
+2022-08-03 12:03:49,004 | INFO | Script Initiation
+2022-08-03 12:03:49,004 | WARNING | Cannot display world map because cartopy is not properly installed
+2022-08-03 12:03:49,014 | INFO | All historical files downloaded
+2022-08-03 12:03:49,025 | INFO | All SSP119 files downloaded
+2022-08-03 12:03:49,034 | INFO | All SSP126 files downloaded
+2022-08-03 12:03:49,043 | INFO | All SSP245 files downloaded
+2022-08-03 12:03:49,051 | INFO | All SSP370 files downloaded
+2022-08-03 12:03:49,060 | INFO | All SSP585 files downloaded
+2022-08-03 12:03:58,420 | INFO | Temperature computation complete

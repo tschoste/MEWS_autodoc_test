@@ -4,6 +4,9 @@ README.md
 pyproject.toml
 setup.cfg
 setup.py
+data_requests/CMIP6.py
+data_requests/__init__.py
+data_requests/noaa.py
 mews/__init__.py
 mews.egg-info/PKG-INFO
 mews.egg-info/SOURCES.txt
