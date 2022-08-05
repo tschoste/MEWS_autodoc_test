@@ -112,26 +112,21 @@ class DiscreteMarkov():
         ----------
         num_step : int or np.int
             number of steps to simulate for the object's defined transition_matrix
-            
         state0 : int or str
             initial state of the history
-            
         min_steps : int : optional
             minimum number of steps before a state can transition
-            
         skip_steps : int :
             Number of steps at the beginning of the markov chain to assign to
                     state0 (this is used for weather files that may begin in the middle
                     of the day to avoid applying heat waves out of sync with
                     day-night cycles)
-            
         count_in_min_steps_intervals : bool : optional : Default = True
             True = apply markov transition matrix as a discrete process that 
                    is randomly tested every min_steps interval (i.e. min_steps = 24
                    means the markov chain state is only tested 1 in 24 steps)
             False = apply markov transition matrix every step but only transition
                    at every min_steps step.
-                   
         Raises
         ------
         ValueError
@@ -146,6 +141,7 @@ class DiscreteMarkov():
         None.
 
         """
+        
         if isinstance(state0,str):
             if not state0 in self._names:
                 raise ValueError("The 'state0' input must be a valid state_name={}".format(str(self._names)))
